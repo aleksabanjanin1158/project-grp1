@@ -12,7 +12,18 @@ struct Node
     struct Node* next;
     struct Node* prev;
 };
-
+struct Node* createExpense(int month[20],float expenses){
+    struct Node* newExpense = (struct Node*)malloc(sizeof(struct Node));
+    if(Node == NULL){
+        printf("No Memory!");
+        exit(EXIT_FAILURE);
+    }
+    Node->month = month;
+    Node->expenses = expenses;
+    Node->next = NULL;
+    Node->prev = NULL;
+    return newExpense;
+}
 float searchMonthExpenses(struct Node* head, char* target_month) 
 {
     struct Node* current = head;
