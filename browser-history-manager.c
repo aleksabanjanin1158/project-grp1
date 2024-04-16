@@ -12,7 +12,7 @@ struct Node
     struct Node* next;
     struct Node* prev;
 };
-struct Node* createExpense(int month[20],float expenses){
+struct Node* createExpense(char month,float expenses){
     struct Node* newExpense = (struct Node*)malloc(sizeof(struct Node));
     if(Node == NULL){
         printf("No Memory!");
@@ -23,6 +23,16 @@ struct Node* createExpense(int month[20],float expenses){
     Node->next = NULL;
     Node->prev = NULL;
     return newExpense;
+}
+struct Node* InsertNewExpense(struct Node* expenses,struct Node** lastExpense,char* month,float expnese){
+    struct Node* newExpense = CreateExpense(month,expense);
+    if(expnse == NULL ){
+        *lastExpenses = newExpense;
+        return newExpnse;
+    }
+    newExpense->next = expenses;
+    expenses->prev = newExpense;
+    return expenses;
 }
 float searchMonthExpenses(struct Node* head, char* target_month) 
 {
