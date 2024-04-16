@@ -24,7 +24,7 @@ struct Node* createExpense(char month,float expenses){
     Node->prev = NULL;
     return newExpense;
 }
-struct Node* InsertNewExpense(struct Node* expenses,struct Node** lastExpense,char* month,float expnese){
+struct Node* InsertNewExpense(struct Node* expenses,struct Node** lastExpense,char* month,float expenese){
     struct Node* newExpense = CreateExpense(month,expense);
     if(expnse == NULL ){
         *lastExpenses = newExpense;
@@ -34,6 +34,17 @@ struct Node* InsertNewExpense(struct Node* expenses,struct Node** lastExpense,ch
     expenses->prev = newExpense;
     return expenses;
 }
+struct Node* InsertAtEnd(struct Node* expenses,struct Node** lastExpense,char* month,float expenese){
+    struct Node* newExpense = CreateExpense(month,expense);
+    if(lastExpense == NULL){
+        printf("No Memory");
+        exit(EXIT_FAILURE);
+    }
+    newExpense->month = month;
+    newExpense->expense = expense;
+    newExpense->next = NULL;
+}
+
 float searchMonthExpenses(struct Node* head, char* target_month) 
 {
     struct Node* current = head;
